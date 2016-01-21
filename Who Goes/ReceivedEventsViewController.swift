@@ -16,13 +16,13 @@ class ReceivedEventsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = RECEIVED_EVENTS_TITLE
+        title = Strings.ReceivedEvents.title
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        guard let user = PFUser.currentUser(), _ = PFInstallation.currentInstallation().deviceToken where user.authenticated else {
+        guard UserManager.hasUserAuthenticated() && UserManager.hasDeviceToken() else {
             
             if let navController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController(){
                 presentViewController(navController, animated: true, completion: nil)

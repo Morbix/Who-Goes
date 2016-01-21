@@ -14,5 +14,16 @@ extension String {
     }
 }
 
-let PUSH_PERMISSION_TITLE = "Push Permission".localized()
-let RECEIVED_EVENTS_TITLE = "Received Events".localized()
+struct Strings {
+    struct PushPermission {
+        static let title = "Push Permission".localized()
+        static let buttonAllow = "Allow".localized()
+        static let buttonContinue = "Continue".localized()
+    }
+    
+    struct ReceivedEvents {
+        static let title = "Received Events".localized()
+    }
+
+}
+

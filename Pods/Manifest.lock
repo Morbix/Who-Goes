@@ -1,18 +1,21 @@
 PODS:
   - Bolts/Tasks (1.6.0)
   - DateTools (1.7.0)
+  - KBRoundedButton (1.0.3)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
   - TableManager (0.0.3)
 
 DEPENDENCIES:
   - DateTools
+  - KBRoundedButton
   - Parse
   - TableManager
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  KBRoundedButton: 1a45392f45b778ca24185b0d365a8b5da3d9c4d6
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   TableManager: 62988b7727cbeb3cb1d8585951b307bb17003980
 

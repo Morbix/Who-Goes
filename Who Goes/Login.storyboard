@@ -32,10 +32,33 @@
                     <view key="view" contentMode="scaleToFill" id="gjQ-aq-efW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQl-FL-Kcq" customClass="KBRoundedButton">
+                                <rect key="frame" x="150" y="520" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="42X-4i-GgU"/>
+                                    <constraint firstAttribute="width" constant="300" id="Ojh-Dx-7Zv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorForStateNormal">
+                                        <color key="value" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cQl-FL-Kcq" firstAttribute="centerX" secondItem="gjQ-aq-efW" secondAttribute="centerX" id="GQ1-LM-vdG"/>
+                            <constraint firstItem="8SK-db-0Zz" firstAttribute="top" secondItem="cQl-FL-Kcq" secondAttribute="bottom" constant="20" id="eUT-vR-6pZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mzl-pj-Grf"/>
                     <connections>
+                        <outlet property="primaryButton" destination="cQl-FL-Kcq" id="0lt-mQ-Uk3"/>
                         <segue destination="tal-En-Kzn" kind="show" identifier="LoginSegue" id="F3T-qn-xxu"/>
                     </connections>
                 </viewController>

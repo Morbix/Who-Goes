@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import KBRoundedButton
 
 class PushAuthorizationViewController: UIViewController {
 
+    @IBOutlet weak var primaryButton: KBRoundedButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = PUSH_PERMISSION_TITLE
+        title = Strings.PushPermission.title
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserManager.hasDeviceToken() {
+            primaryButton.setTitle(Strings.PushPermission.buttonContinue, forState: .Normal)
+        }else{
+            primaryButton.setTitle(Strings.PushPermission.buttonAllow, forState: .Normal)
+        }
     }
 }
