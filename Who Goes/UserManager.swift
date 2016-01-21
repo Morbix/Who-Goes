@@ -19,7 +19,7 @@ class UserManager {
     }
     
     static func hasDeviceToken() -> Bool {
-        guard let _ = PFInstallation.currentInstallation().deviceToken else {
+        guard let token = PFInstallation.currentInstallation().deviceToken where !token.isEmpty else {
             return false
         }
         

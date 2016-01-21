@@ -21,10 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-        
-        application.isRegisteredForRemoteNotifications()
-        
         return true
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        // Store the deviceToken in the current Installation and save it to Parse
+        let installation = PFInstallation.currentInstallation()
+        installation.setDeviceTokenFromData(deviceToken)
+        installation.saveInBackground()
     }
 
     func applicationWillResignActive(application: UIApplication) {
