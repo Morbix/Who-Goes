@@ -49,15 +49,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyE-Vr-aAH">
+                                <rect key="frame" x="150" y="200" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MEM-ZE-CXt"/>
+                                    <constraint firstAttribute="width" constant="300" id="sfG-DR-7eN"/>
+                                </constraints>
+                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cQl-FL-Kcq" firstAttribute="centerX" secondItem="gjQ-aq-efW" secondAttribute="centerX" id="GQ1-LM-vdG"/>
                             <constraint firstItem="8SK-db-0Zz" firstAttribute="top" secondItem="cQl-FL-Kcq" secondAttribute="bottom" constant="20" id="eUT-vR-6pZ"/>
+                            <constraint firstItem="cyE-Vr-aAH" firstAttribute="centerY" secondItem="gjQ-aq-efW" secondAttribute="centerY" id="nfD-Yq-Dzc"/>
+                            <constraint firstItem="cyE-Vr-aAH" firstAttribute="centerX" secondItem="gjQ-aq-efW" secondAttribute="centerX" id="pLf-k0-lch"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mzl-pj-Grf"/>
                     <connections>
+                        <outlet property="explanationLabel" destination="cyE-Vr-aAH" id="cDw-EN-JJt"/>
                         <outlet property="primaryButton" destination="cQl-FL-Kcq" id="0lt-mQ-Uk3"/>
                         <segue destination="tal-En-Kzn" kind="show" identifier="LoginSegue" id="F3T-qn-xxu"/>
                     </connections>

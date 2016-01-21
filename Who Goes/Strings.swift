@@ -17,8 +17,10 @@ extension String {
 struct Strings {
     struct PushPermission {
         static let title = "Push Permission".localized()
-        static let buttonAllow = "Allow".localized()
-        static let buttonContinue = "Continue".localized()
+        static let buttonAllow = "Yes, I would.".localized()
+        static let buttonContinue = "Proceed".localized()
+        static let permissionExplanation = "Would you like to be notified when your friends are calling you for some special occasion?".localized()
+        static let permissionGranted = "You've enabled the Push Notifications.".localized()
     }
     
     struct ReceivedEvents {

@@ -12,6 +12,7 @@ import KBRoundedButton
 class PushAuthorizationViewController: UIViewController {
 
     @IBOutlet weak var primaryButton: KBRoundedButton!
+    @IBOutlet weak var explanationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,10 @@ class PushAuthorizationViewController: UIViewController {
         
         if UserManager.hasDeviceToken() {
             primaryButton.setTitle(Strings.PushPermission.buttonContinue, forState: .Normal)
+            explanationLabel.text = Strings.PushPermission.permissionGranted
         }else{
             primaryButton.setTitle(Strings.PushPermission.buttonAllow, forState: .Normal)
+            explanationLabel.text = Strings.PushPermission.permissionExplanation
         }
     }
 }
