@@ -4,12 +4,14 @@ PODS:
   - KBRoundedButton (1.0.3)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
+  - SwiftyTimer (1.2.0)
   - TableManager (0.0.3)
 
 DEPENDENCIES:
   - DateTools
   - KBRoundedButton
   - Parse
+  - SwiftyTimer
   - TableManager
 
 SPEC CHECKSUMS:
@@ -17,6 +19,7 @@ SPEC CHECKSUMS:
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   KBRoundedButton: 1a45392f45b778ca24185b0d365a8b5da3d9c4d6
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  SwiftyTimer: 5453593e0aaacfb1611fb6986d257281140913bb
   TableManager: 62988b7727cbeb3cb1d8585951b307bb17003980
 
 COCOAPODS: 0.39.0

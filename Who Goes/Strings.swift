@@ -22,7 +22,7 @@ struct Strings {
         static let permissionExplanation = "Would you like to be notified when your friends are calling you for some special occasion?".localized()
         static let permissionGranted = "You've enabled the Push Notifications.".localized()
     }
-    
+
     struct ReceivedEvents {
         static let title = "Received Events".localized()
     }

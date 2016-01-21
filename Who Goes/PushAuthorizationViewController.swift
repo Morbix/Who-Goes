@@ -8,6 +8,7 @@
 
 import UIKit
 import KBRoundedButton
+import SwiftyTimer
 
 class PushAuthorizationViewController: UIViewController {
 
@@ -18,11 +19,15 @@ class PushAuthorizationViewController: UIViewController {
         super.viewDidLoad()
 
         title = Strings.PushPermission.title
+        
+        NSTimer.every(1.seconds) {
+            self.updateState()
+        }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    // MARK: Methods
+    
+    func updateState(){
         if UserManager.hasDeviceToken() {
             primaryButton.setTitle(Strings.PushPermission.buttonContinue, forState: .Normal)
             explanationLabel.text = Strings.PushPermission.permissionGranted
@@ -31,4 +36,23 @@ class PushAuthorizationViewController: UIViewController {
             explanationLabel.text = Strings.PushPermission.permissionExplanation
         }
     }
+    
+    func goToLogin(){
+        performSegueWithIdentifier(Identifiers.Segues.Login, sender: nil)
+    }
+    
+    func askForPermissions(){
+        
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func primaryButtonTouched(sender: AnyObject) {
+        if UserManager.hasDeviceToken() {
+            goToLogin()
+        }else{
+            askForPermissions()
+        }
+    }
+    
 }

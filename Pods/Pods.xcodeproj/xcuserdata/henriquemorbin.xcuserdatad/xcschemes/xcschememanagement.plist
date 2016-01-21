@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyTimer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TableManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AEAF02DBDCDDCBBF7B36FED52AC9AABF</key>
+		<key>44BF932EC86F2B530CFB5C930E40D3E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C43A0C9541A1488CA46636BB80F7609</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FCB28240328E7F5C94DFFBE07CD25997</key>
+		<key>E6958A65D110D0D59D907F55634BAB85</key>
 		<dict>
 			<key>primary</key>
 			<true/>

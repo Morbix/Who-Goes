@@ -23,6 +23,7 @@
 		2DAA4E0C1C5121F2009D776C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E0B1C5121F2009D776C /* LoginViewController.swift */; };
 		2DAA4E121C513F9C009D776C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E111C513F9C009D776C /* Strings.swift */; };
 		2DAA4E141C5144C6009D776C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E131C5144C6009D776C /* UserManager.swift */; };
+		2DAA4E161C514F0D009D776C /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E151C514F0D009D776C /* Identifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2DAA4E0B1C5121F2009D776C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DAA4E111C513F9C009D776C /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2DAA4E131C5144C6009D776C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		2DAA4E151C514F0D009D776C /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		564E9C68319D563FB097202C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		815FFC36BEA85BC34DC18801 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2DAA4E111C513F9C009D776C /* Strings.swift */,
+				2DAA4E151C514F0D009D776C /* Identifiers.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				2DAA4DFC1C511BB5009D776C /* Keys.swift in Sources */,
 				2DAA4E141C5144C6009D776C /* UserManager.swift in Sources */,
 				2DAA4DD41C510F03009D776C /* AppDelegate.swift in Sources */,
+				2DAA4E161C514F0D009D776C /* Identifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
