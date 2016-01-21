@@ -21,6 +21,7 @@
 		2DAA4E081C512111009D776C /* ChannelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E071C512111009D776C /* ChannelDetailViewController.swift */; };
 		2DAA4E0A1C51213B009D776C /* PushAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E091C51213B009D776C /* PushAuthorizationViewController.swift */; };
 		2DAA4E0C1C5121F2009D776C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E0B1C5121F2009D776C /* LoginViewController.swift */; };
+		2DAA4E121C513F9C009D776C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E111C513F9C009D776C /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2DAA4E071C512111009D776C /* ChannelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelDetailViewController.swift; sourceTree = "<group>"; };
 		2DAA4E091C51213B009D776C /* PushAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAuthorizationViewController.swift; sourceTree = "<group>"; };
 		2DAA4E0B1C5121F2009D776C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DAA4E111C513F9C009D776C /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		564E9C68319D563FB097202C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		815FFC36BEA85BC34DC18801 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,8 @@
 			children = (
 				2DAA4DD31C510F03009D776C /* AppDelegate.swift */,
 				2DAA4DF31C5114C5009D776C /* Keys.swift */,
+				2DAA4E101C513F8D009D776C /* Helpers */,
+				2DAA4E0D1C513B97009D776C /* Classes */,
 				2DAA4E001C511F62009D776C /* Views Controllers */,
 				2DAA4DFF1C511F5D009D776C /* Views */,
 				2DAA4DDA1C510F03009D776C /* Assets.xcassets */,
@@ -149,6 +153,21 @@
 				2DAA4E0B1C5121F2009D776C /* LoginViewController.swift */,
 			);
 			name = "Views Controllers";
+			sourceTree = "<group>";
+		};
+		2DAA4E0D1C513B97009D776C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2DAA4E101C513F8D009D776C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DAA4E111C513F9C009D776C /* Strings.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		AF904C85BF59E2293176414D /* Frameworks */ = {
@@ -313,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAA4E0C1C5121F2009D776C /* LoginViewController.swift in Sources */,
+				2DAA4E121C513F9C009D776C /* Strings.swift in Sources */,
 				2DAA4E0A1C51213B009D776C /* PushAuthorizationViewController.swift in Sources */,
 				2DAA4E061C5120F7009D776C /* ChannelsViewController.swift in Sources */,
 				2DAA4E021C5120B2009D776C /* ReceivedEventsViewController.swift in Sources */,

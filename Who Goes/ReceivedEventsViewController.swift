@@ -7,29 +7,31 @@
 //
 
 import UIKit
+import Parse
 
 class ReceivedEventsViewController: UIViewController {
 
+    var validated = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        title = RECEIVED_EVENTS_TITLE
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let user = PFUser.currentUser(), _ = PFInstallation.currentInstallation().deviceToken where user.authenticated else {
+            
+            if let navController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController(){
+                presentViewController(navController, animated: true, completion: nil)
+            }
+            
+            return
+        }
+        
+        validated = true
     }
-    */
 
 }
