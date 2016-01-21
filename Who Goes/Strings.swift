@@ -20,7 +20,11 @@ struct Strings {
         static let buttonAllow = "Yes, I would.".localized()
         static let buttonContinue = "Proceed".localized()
         static let permissionExplanation = "Would you like to be notified when your friends are calling you for some special occasion?".localized()
-        static let permissionGranted = "You've enabled the Push Notifications.".localized()
+        static let permissionGranted = "You've enabled Notifications.".localized()
+        static let alertTitle = "Failed".localized()
+        static let alertMessage = "We couldn't enable Notifications. Go to Settings app and verify if you have denied the Notifications for 'Who Goes?'.".localized()
+        static let alertActionOk = "Ok".localized()
+        static let alertActionSettings = "Settings".localized()
     }
 
     struct ReceivedEvents {

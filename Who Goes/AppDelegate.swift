@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        
+        application.isRegisteredForRemoteNotifications()
+        
         return true
     }
 
