@@ -67,8 +67,10 @@ class PushAuthorizationViewController: UIViewController {
         askedForPermissions = true
         
         NSTimer.after(10.seconds) {
-            self.askedForPermissions = false
-            self.showAlert(withTitle: Strings.PushPermission.alertTitle, message: Strings.PushPermission.alertMessage)
+            if !UserManager.hasDeviceToken() {
+                self.askedForPermissions = false
+                self.showAlert(withTitle: Strings.PushPermission.alertTitle, message: Strings.PushPermission.alertMessage)
+            }
         }
     }
     

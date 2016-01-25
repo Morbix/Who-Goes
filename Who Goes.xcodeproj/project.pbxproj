@@ -13,7 +13,6 @@
 		2DAA4DDB1C510F03009D776C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DDA1C510F03009D776C /* Assets.xcassets */; };
 		2DAA4DDE1C510F03009D776C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DDC1C510F03009D776C /* LaunchScreen.storyboard */; };
 		2DAA4DE91C510F03009D776C /* Who_GoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4DE81C510F03009D776C /* Who_GoesTests.swift */; };
-		2DAA4DFC1C511BB5009D776C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4DF31C5114C5009D776C /* Keys.swift */; };
 		2DAA4DFE1C511F1F009D776C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DFD1C511F1F009D776C /* Login.storyboard */; };
 		2DAA4E021C5120B2009D776C /* ReceivedEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E011C5120B2009D776C /* ReceivedEventsViewController.swift */; };
 		2DAA4E041C5120CC009D776C /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E031C5120CC009D776C /* EventDetailsViewController.swift */; };
@@ -24,6 +23,7 @@
 		2DAA4E121C513F9C009D776C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E111C513F9C009D776C /* Strings.swift */; };
 		2DAA4E141C5144C6009D776C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E131C5144C6009D776C /* UserManager.swift */; };
 		2DAA4E161C514F0D009D776C /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4E151C514F0D009D776C /* Identifiers.swift */; };
+		A726277C1C568AAD00296B54 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726277B1C568AAD00296B54 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 		2DAA4DE41C510F03009D776C /* Who GoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Who GoesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAA4DE81C510F03009D776C /* Who_GoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Who_GoesTests.swift; sourceTree = "<group>"; };
 		2DAA4DEA1C510F03009D776C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DAA4DF31C5114C5009D776C /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2DAA4DF61C5117A2009D776C /* Who Goes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Who Goes-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DAA4DFD1C511F1F009D776C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2DAA4E011C5120B2009D776C /* ReceivedEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedEventsViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		2DAA4E151C514F0D009D776C /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		564E9C68319D563FB097202C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		815FFC36BEA85BC34DC18801 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A726277B1C568AAD00296B54 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2DAA4DD31C510F03009D776C /* AppDelegate.swift */,
-				2DAA4DF31C5114C5009D776C /* Keys.swift */,
+				A726277B1C568AAD00296B54 /* Keys.swift */,
 				2DAA4E101C513F8D009D776C /* Helpers */,
 				2DAA4E0D1C513B97009D776C /* Classes */,
 				2DAA4E001C511F62009D776C /* Views Controllers */,
@@ -237,6 +237,7 @@
 				TargetAttributes = {
 					2DAA4DCF1C510F02009D776C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = U4D7MD5WUL;
 					};
 					2DAA4DE31C510F03009D776C = {
 						CreatedOnToolsVersion = 7.2;
@@ -341,10 +342,10 @@
 				2DAA4E121C513F9C009D776C /* Strings.swift in Sources */,
 				2DAA4E0A1C51213B009D776C /* PushAuthorizationViewController.swift in Sources */,
 				2DAA4E061C5120F7009D776C /* ChannelsViewController.swift in Sources */,
+				A726277C1C568AAD00296B54 /* Keys.swift in Sources */,
 				2DAA4E021C5120B2009D776C /* ReceivedEventsViewController.swift in Sources */,
 				2DAA4E041C5120CC009D776C /* EventDetailsViewController.swift in Sources */,
 				2DAA4E081C512111009D776C /* ChannelDetailViewController.swift in Sources */,
-				2DAA4DFC1C511BB5009D776C /* Keys.swift in Sources */,
 				2DAA4E141C5144C6009D776C /* UserManager.swift in Sources */,
 				2DAA4DD41C510F03009D776C /* AppDelegate.swift in Sources */,
 				2DAA4E161C514F0D009D776C /* Identifiers.swift in Sources */,
@@ -425,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -463,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -476,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Who Goes/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -492,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Who Goes/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
