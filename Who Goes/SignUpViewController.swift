@@ -31,6 +31,11 @@ class SignUpViewController: UIViewController {
     // MARK: Methods
     
     func setUpUI() {
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmTextField.delegate = self
+        
         primaryButton.setTitle(Strings.SignUp.signUpAndLogin, forState: .Normal)
         usernameLabel.text = Strings.SignUp.username
         passwordLabel.text = Strings.SignUp.password
@@ -44,9 +49,42 @@ class SignUpViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func trySignUp() {
+        guard let password = passwordTextField.text where password == confirmTextField.text else {
+            Strings.SignUp.alertMessage.showAsAlert(target: self)
+            return
+        }
+        
+        primaryButton.working = true
+        
+        UserManager.signUp(usernameTextField.text ?? "", password: password) { (status, error) -> Void in
+            self.primaryButton.working = false
+            
+            if let error = error?.localizedDescription {
+                error.showAsAlert(target: self)
+            }else{
+                self.dismissModal()
+            }
+        }
+    }
+    
     // MARK: Actions
     
     @IBAction func primaryButtonTouched(sender: AnyObject) {
-        dismissModal()
+        trySignUp()
+    }
+}
+
+extension SignUpViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            confirmTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

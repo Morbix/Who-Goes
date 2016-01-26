@@ -45,6 +45,7 @@ struct Strings {
         static let username = "Username".localized()
         static let password = "Password".localized()
         static let confirmPassword = "Confirm Password".localized()
+        static let alertMessage = "The password fields are not equal.".localized()
     }
 }
 

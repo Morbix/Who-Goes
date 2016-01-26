@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B281C8E9086BD10BE93A955 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DEFB07B9DDD1DD84D97DE1 /* Pods.framework */; };
 		2D7FBDFC1C57AB8500FA4C99 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FBDFB1C57AB8500FA4C99 /* SignUpViewController.swift */; };
+		2D7FBDFF1C57C4E100FA4C99 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FBDFE1C57C4E100FA4C99 /* StringExtension.swift */; };
 		2DAA4DD41C510F03009D776C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4DD31C510F03009D776C /* AppDelegate.swift */; };
 		2DAA4DD91C510F03009D776C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DD71C510F03009D776C /* Main.storyboard */; };
 		2DAA4DDB1C510F03009D776C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DDA1C510F03009D776C /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		01DEFB07B9DDD1DD84D97DE1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7FBDFB1C57AB8500FA4C99 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2D7FBDFE1C57C4E100FA4C99 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2DAA4DD01C510F03009D776C /* Who Goes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Who Goes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAA4DD31C510F03009D776C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DAA4DD81C510F03009D776C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2D7FBDFD1C57C4BA00FA4C99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D7FBDFE1C57C4E100FA4C99 /* StringExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		2DAA4DC71C510F02009D776C = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 			children = (
 				2DAA4DD31C510F03009D776C /* AppDelegate.swift */,
 				A726277B1C568AAD00296B54 /* Keys.swift */,
+				2D7FBDFD1C57C4BA00FA4C99 /* Extensions */,
 				2DAA4E101C513F8D009D776C /* Helpers */,
 				2DAA4E0D1C513B97009D776C /* Classes */,
 				2DAA4E001C511F62009D776C /* Views Controllers */,
@@ -352,6 +363,7 @@
 				2DAA4E081C512111009D776C /* ChannelDetailViewController.swift in Sources */,
 				2DAA4E141C5144C6009D776C /* UserManager.swift in Sources */,
 				2DAA4DD41C510F03009D776C /* AppDelegate.swift in Sources */,
+				2D7FBDFF1C57C4E100FA4C99 /* StringExtension.swift in Sources */,
 				2DAA4E161C514F0D009D776C /* Identifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

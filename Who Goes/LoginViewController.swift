@@ -30,6 +30,10 @@ class LoginViewController: UIViewController {
     // MARK: Methods
     
     func setUpUI() {
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        
         primaryButton.setTitle(Strings.Login.login, forState: .Normal)
         usernameLabel.text = Strings.Login.username
         passwordLabel.text = Strings.Login.password
@@ -45,13 +49,45 @@ class LoginViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func tryLogin() {
+        
+        primaryButton.working = true
+        
+        UserManager.login(usernameTextField.text ?? "", password: passwordTextField.text ?? "") {
+            (user, error) -> Void in
+            
+            self.primaryButton.working = false
+            
+            guard let user = user where user.authenticated else {
+                if let error = error?.localizedDescription {
+                    error.showAsAlert(target: self)
+                }
+                return
+            }
+            
+            self.dismissModal()
+        }
+    }
+    
     // MARK: Actions
     
     @IBAction func primaryButtonTouched(sender: AnyObject) {
-        dismissModal()
+        tryLogin()
     }
     
     @IBAction func signUpTouched(sender: AnyObject) {
         goToSignUp()
+    }
+}
+
+extension LoginViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
