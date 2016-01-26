@@ -12,6 +12,7 @@ import KBRoundedButton
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var primaryButton: KBRoundedButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -36,9 +37,21 @@ class LoginViewController: UIViewController {
         passwordTextField.placeholder = "******"
     }
     
+    func goToSignUp(){
+        performSegueWithIdentifier(Identifiers.Segues.SignUp, sender: nil)
+    }
+    
+    func dismissModal() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: Actions
     
     @IBAction func primaryButtonTouched(sender: AnyObject) {
-        
+        dismissModal()
+    }
+    
+    @IBAction func signUpTouched(sender: AnyObject) {
+        goToSignUp()
     }
 }

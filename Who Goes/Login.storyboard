@@ -168,6 +168,17 @@
                                     <constraint firstItem="6SH-ay-GdJ" firstAttribute="top" secondItem="s6H-BN-jH1" secondAttribute="top" id="qnQ-oG-mak"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qH-nR-Rfn">
+                                <rect key="frame" x="380" y="276" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="kRL-tH-pc9"/>
+                                    <constraint firstAttribute="height" constant="30" id="yj0-Gx-JDa"/>
+                                </constraints>
+                                <state key="normal" title="I don't have an account yet."/>
+                                <connections>
+                                    <action selector="signUpTouched:" destination="tal-En-Kzn" eventType="touchUpInside" id="4bY-pb-LeF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -176,6 +187,8 @@
                             <constraint firstAttribute="trailing" secondItem="xdG-vx-0V0" secondAttribute="trailing" id="82c-Df-dzY"/>
                             <constraint firstItem="zc1-h3-aH3" firstAttribute="top" secondItem="tTy-NR-Gpj" secondAttribute="bottom" constant="20" id="Bae-xE-uVl"/>
                             <constraint firstItem="vil-hL-LnX" firstAttribute="leading" secondItem="2fl-VN-jij" secondAttribute="leading" constant="15" id="FVn-wd-UJ6"/>
+                            <constraint firstAttribute="trailing" secondItem="3qH-nR-Rfn" secondAttribute="trailing" constant="20" id="Im7-BC-MFX"/>
+                            <constraint firstItem="3qH-nR-Rfn" firstAttribute="top" secondItem="s6H-BN-jH1" secondAttribute="bottom" constant="8" id="JYh-CJ-YMQ"/>
                             <constraint firstItem="s6H-BN-jH1" firstAttribute="top" secondItem="vil-hL-LnX" secondAttribute="bottom" constant="8" id="Po6-pI-ArA"/>
                             <constraint firstItem="s6H-BN-jH1" firstAttribute="leading" secondItem="2fl-VN-jij" secondAttribute="leading" id="STt-Nu-vuR"/>
                             <constraint firstItem="xdG-vx-0V0" firstAttribute="leading" secondItem="2fl-VN-jij" secondAttribute="leading" id="a8H-IN-gqh"/>
@@ -191,6 +204,7 @@
                         <outlet property="passwordLabel" destination="vil-hL-LnX" id="am3-5i-AK6"/>
                         <outlet property="passwordTextField" destination="6SH-ay-GdJ" id="znV-yv-Qh1"/>
                         <outlet property="primaryButton" destination="tTy-NR-Gpj" id="7SG-IV-N83"/>
+                        <outlet property="signUpButton" destination="3qH-nR-Rfn" id="jFv-i6-Ey1"/>
                         <outlet property="usernameLabel" destination="1WQ-ne-lm4" id="SDG-z9-sB3"/>
                         <outlet property="usernameTextField" destination="OPY-9u-OPN" id="Pze-7f-4p2"/>
                         <segue destination="CbF-7x-WDH" kind="show" identifier="SignUpSegue" id="pLa-oP-Nq5"/>

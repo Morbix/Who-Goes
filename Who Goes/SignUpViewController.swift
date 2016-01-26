@@ -40,9 +40,13 @@ class SignUpViewController: UIViewController {
         confirmTextField.placeholder = "******"
     }
     
+    func dismissModal() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: Actions
     
     @IBAction func primaryButtonTouched(sender: AnyObject) {
-        
+        dismissModal()
     }
 }
