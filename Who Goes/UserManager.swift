@@ -25,4 +25,22 @@ class UserManager {
         
         return true
     }
+    
+    static func logout(block: PFUserLogoutResultBlock) {
+        PFUser.logOutInBackgroundWithBlock(block)
+    }
+    
+    
+    static func login(username: String, password: String, block: PFUserResultBlock) {
+        PFUser.logInWithUsernameInBackground(username, password: password, block: block)
+    }
+    
+    static func signUp(username: String, password: String, block: PFBooleanResultBlock) {
+        let newUser = PFUser()
+        
+        newUser.username = username
+        newUser.password = password
+        
+        newUser.signUpInBackgroundWithBlock(block)
+    }
 }
