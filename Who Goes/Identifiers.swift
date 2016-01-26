@@ -11,6 +11,7 @@ import Foundation
 struct Identifiers {
     struct Segues {
         static let Login = "LoginSegue"
+        static let SignUp = "SignUpSegue"
     }
     
     struct StoryboardIds {

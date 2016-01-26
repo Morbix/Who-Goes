@@ -31,5 +31,20 @@ struct Strings {
         static let title = "Received Events".localized()
     }
 
+    struct Login {
+        static let title = "Login".localized()
+        static let login = "Login".localized()
+        static let signUp = "Sign Up".localized()
+        static let username = "Username".localized()
+        static let password = "Password".localized()
+    }
+    
+    struct SignUp {
+        static let title = "Sign Up".localized()
+        static let signUpAndLogin = "Sign Up & Login".localized()
+        static let username = "Username".localized()
+        static let password = "Password".localized()
+        static let confirmPassword = "Confirm Password".localized()
+    }
 }
 

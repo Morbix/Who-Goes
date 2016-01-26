@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B281C8E9086BD10BE93A955 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DEFB07B9DDD1DD84D97DE1 /* Pods.framework */; };
+		2D7FBDFC1C57AB8500FA4C99 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FBDFB1C57AB8500FA4C99 /* SignUpViewController.swift */; };
 		2DAA4DD41C510F03009D776C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAA4DD31C510F03009D776C /* AppDelegate.swift */; };
 		2DAA4DD91C510F03009D776C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DD71C510F03009D776C /* Main.storyboard */; };
 		2DAA4DDB1C510F03009D776C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAA4DDA1C510F03009D776C /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		01DEFB07B9DDD1DD84D97DE1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7FBDFB1C57AB8500FA4C99 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2DAA4DD01C510F03009D776C /* Who Goes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Who Goes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAA4DD31C510F03009D776C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DAA4DD81C510F03009D776C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				2DAA4E071C512111009D776C /* ChannelDetailViewController.swift */,
 				2DAA4E091C51213B009D776C /* PushAuthorizationViewController.swift */,
 				2DAA4E0B1C5121F2009D776C /* LoginViewController.swift */,
+				2D7FBDFB1C57AB8500FA4C99 /* SignUpViewController.swift */,
 			);
 			name = "Views Controllers";
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				2DAA4E061C5120F7009D776C /* ChannelsViewController.swift in Sources */,
 				A726277C1C568AAD00296B54 /* Keys.swift in Sources */,
 				2DAA4E021C5120B2009D776C /* ReceivedEventsViewController.swift in Sources */,
+				2D7FBDFC1C57AB8500FA4C99 /* SignUpViewController.swift in Sources */,
 				2DAA4E041C5120CC009D776C /* EventDetailsViewController.swift in Sources */,
 				2DAA4E081C512111009D776C /* ChannelDetailViewController.swift in Sources */,
 				2DAA4E141C5144C6009D776C /* UserManager.swift in Sources */,
