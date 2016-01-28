@@ -16,9 +16,10 @@ class Channel: PFObject {
     
     // MARK: Methods
     
-    static func saveNewChannel(withName name: String, block: (Channel, NSError?) -> Void) {
+    static func saveNewChannel(withName name: String, block: (Channel?, NSError?) -> Void) {
         
         guard let user = PFUser.currentUser() else {
+            block(nil, NSError(domain: "User is not logged.", code: -1, userInfo: nil))
             return
         }
         
@@ -35,6 +36,26 @@ class Channel: PFObject {
         newChannel.saveInBackgroundWithBlock { (status, error) -> Void in
             block(newChannel, error)
         }
+    }
+    
+    static func fetchChannelsFromCurrentUser(block: PFQueryArrayResultBlock) {
+        guard let query = Channel.query(), let user = PFUser.currentUser() else {
+            block(nil, NSError(domain: "User is not logged.", code: -2, userInfo: nil))
+            return
+        }
+        
+        query.includeKey("createdBy")
+        
+        query.whereKey("createdBy", equalTo: user)
+        
+        if query.hasCachedResult {
+            query.cachePolicy = .CacheThenNetwork
+        }else{
+            query.cachePolicy = .NetworkOnly
+        }
+        
+        
+        query.findObjectsInBackgroundWithBlock(block)
     }
 }
 

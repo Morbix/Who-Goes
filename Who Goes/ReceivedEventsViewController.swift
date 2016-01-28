@@ -30,6 +30,8 @@ class ReceivedEventsViewController: UIViewController {
     func checkPermissions() {
         guard UserManager.hasUserAuthenticated() && UserManager.hasDeviceToken() else {
             
+            validated = false
+            
             UserManager.openPermissionAndLoginDialog(self)
             
             return

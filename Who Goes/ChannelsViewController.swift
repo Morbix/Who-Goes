@@ -33,6 +33,10 @@ class ChannelsViewController: UIViewController {
         super.viewDidAppear(animated)
         
         checkPermissions()
+        
+        if validated {
+            fetchChannelsFromCurrentUser()
+        }
     }
 
     // MARK: SetUps
@@ -64,6 +68,8 @@ class ChannelsViewController: UIViewController {
     func checkPermissions() {
         guard UserManager.hasUserAuthenticated() && UserManager.hasDeviceToken() else {
             
+            validated = false 
+            
             UserManager.openPermissionAndLoginDialog(self)
             
             return
@@ -94,12 +100,15 @@ class ChannelsViewController: UIViewController {
             
             EZLoadingActivity.hide()
             
-            if let error = error?.localizedDescription {
-                error.showAsAlert(target: self)
-            }else{
-                self.channels.append(channel)
-                self.updateTableRows()
+            guard let channel = channel else {
+                if let error = error?.localizedDescription {
+                    error.showAsAlert(target: self)
+                }
+                return
             }
+            
+            self.channels.append(channel)
+            self.updateTableRows()
         }
     }
     
@@ -120,6 +129,23 @@ class ChannelsViewController: UIViewController {
         }
         
         tableManager.reloadData()
+    }
+    
+    func fetchChannelsFromCurrentUser() {
+        Channel.fetchChannelsFromCurrentUser { (objects, error) -> Void in
+            guard let channels = objects as? [Channel] else {
+                print("Remote results are not [Channel].")
+                if let error = error?.localizedDescription {
+                    error.showAsAlert(target: self)
+                }
+                return
+            }
+            
+            self.channels.removeAll()
+            self.channels.appendContentsOf(channels)
+            
+            self.updateTableRows()
+        }
     }
     
     // MARK: Actions
