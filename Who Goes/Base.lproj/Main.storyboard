@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="biR-KP-K4j">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iiq-pa-Ywc" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iiq-pa-Ywc" customClass="MainTabBarController" customModule="Who_Goes" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bzL-gA-AMa">
                         <autoresizingMask key="autoresizingMask"/>
