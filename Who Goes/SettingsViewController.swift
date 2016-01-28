@@ -17,6 +17,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = Strings.Settings.title
+        
         updateState()
     }
     

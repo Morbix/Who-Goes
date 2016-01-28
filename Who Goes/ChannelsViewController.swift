@@ -15,7 +15,7 @@ class ChannelsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = Strings.Channels.title
     }
     
     override func viewDidAppear(animated: Bool) {

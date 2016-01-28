@@ -30,6 +30,10 @@ struct Strings {
     struct ReceivedEvents {
         static let title = "Received Events".localized()
     }
+    
+    struct Channels {
+        static let title = "Channels".localized()
+    }
 
     struct Login {
         static let title = "Login".localized()
