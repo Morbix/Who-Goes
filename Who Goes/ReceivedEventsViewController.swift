@@ -22,16 +22,25 @@ class ReceivedEventsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        checkPermissions()
+    }
+
+    // MARK: Methods
+    
+    func checkPermissions() {
         guard UserManager.hasUserAuthenticated() && UserManager.hasDeviceToken() else {
             
-            if let navController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController(){
-                presentViewController(navController, animated: true, completion: nil)
-            }
+            openPermissionAndLoginDialog()
             
             return
         }
         
         validated = true
     }
-
+    
+    func openPermissionAndLoginDialog() {
+        if let navController = UIStoryboard(name: Identifiers.StoryboardName.Login, bundle: nil).instantiateInitialViewController(){
+            presentViewController(navController, animated: true, completion: nil)
+        }
+    }
 }

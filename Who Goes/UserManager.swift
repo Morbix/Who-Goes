@@ -19,6 +19,10 @@ class UserManager {
     }
     
     static func hasDeviceToken() -> Bool {
+        
+        // TODO: Forcing return to work in the simulator
+        return true
+        
         guard let token = PFInstallation.currentInstallation().deviceToken where !token.isEmpty else {
             return false
         }

@@ -47,5 +47,11 @@ struct Strings {
         static let confirmPassword = "Confirm Password".localized()
         static let alertMessage = "The password fields are not equal.".localized()
     }
+    
+    struct Settings {
+        static let title = "Settings".localized()
+        static let login = "Login".localized()
+        static let logout = "Logout".localized()
+    }
 }
 

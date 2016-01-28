@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b4G-74-xc0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="mh3-Qt-Ojo">
+            <objects>
+                <viewController id="rfM-Aq-00Y" customClass="SettingsViewController" customModule="Who_Goes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W0Y-V9-r2z"/>
+                        <viewControllerLayoutGuide type="bottom" id="1lK-WT-zHL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4SJ-9C-l6i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-ZF-wdG" customClass="KBRoundedButton">
+                                <rect key="frame" x="150" y="80" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DCa-0b-VfU"/>
+                                    <constraint firstAttribute="height" constant="60" id="TDW-Gs-zx9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorForStateNormal">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="authenticationTouched:" destination="rfM-Aq-00Y" eventType="touchUpInside" id="upG-q1-fgA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DHc-ZF-wdG" firstAttribute="top" secondItem="W0Y-V9-r2z" secondAttribute="bottom" constant="16" id="LPE-qn-J7p"/>
+                            <constraint firstItem="DHc-ZF-wdG" firstAttribute="centerX" secondItem="4SJ-9C-l6i" secondAttribute="centerX" id="PmU-Hi-sog"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pYD-sT-9yn"/>
+                    <connections>
+                        <outlet property="authenticationButton" destination="DHc-ZF-wdG" id="kzy-RX-GWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6B-cG-U5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="2237"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ntY-kx-GLc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b4G-74-xc0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="HM1-GJ-Rzh"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6n3-Yd-dss">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rfM-Aq-00Y" kind="relationship" relationship="rootViewController" id="JHQ-j0-bHN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSK-oC-zYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="2237"/>
+        </scene>
+    </scenes>
+</document>

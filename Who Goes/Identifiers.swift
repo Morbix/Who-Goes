@@ -14,8 +14,12 @@ struct Identifiers {
         static let SignUp = "SignUpSegue"
     }
     
-    struct StoryboardIds {
-        
+    struct StoryboardName {
+        static let Main = "Main"
+        static let ReceivedEvents = "ReceivedEventes"
+        static let Channels = "Channels"
+        static let Settings = "Settings"
+        static let Login = "Login"
     }
     
     struct Cells {
