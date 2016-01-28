@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import TableManager
 
 class ChannelsViewController: UIViewController {
 
     var validated = false
     var channels = [String]()
+    @IBOutlet weak var __tableView: UITableView!
+    lazy var tableManager : TableManager = TableManager(tableView: self.__tableView)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = Strings.Channels.title
         
+        setUpTable()
         setUpNavBar()
     }
     
@@ -27,6 +31,18 @@ class ChannelsViewController: UIViewController {
         checkPermissions()
     }
 
+    // MARK: SetUps
+    
+    func setUpTable() {
+        tableManager.stateRows = TableManager.getDefaultStateRows()
+        tableManager.sections.append(Section())
+    }
+    
+    func setUpNavBar() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addBarButtonTouched")
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
     // MARK: Methods
     
     func checkPermissions() {
@@ -38,11 +54,6 @@ class ChannelsViewController: UIViewController {
         }
         
         validated = true
-    }
-    
-    func setUpNavBar() {
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addBarButtonTouched")
-        navigationItem.rightBarButtonItem = addButton
     }
     
     func showAddDialog() {
@@ -61,7 +72,27 @@ class ChannelsViewController: UIViewController {
     
     func saveChannel(channelName: String) {
         channels.append(channelName)
-        print(channels)
+        updateTable()
+    }
+    
+    func updateTable() {
+        let section = tableManager.sectionForIndex(0)
+        section.rows.removeAll()
+        
+        for channel in channels {
+            let row = Row(identifier: Identifiers.Cell.Channel, object: channel) { (object, cell, indexPath) -> Void in
+                if let object = object as? String {
+                    cell.textLabel?.text = object
+                    cell.detailTextLabel?.text = Strings.Channels.createdBy
+                }
+            }
+            row.didSelectRowAtIndexPath = { (row: Row, tableView: UITableView, indexPath: NSIndexPath) -> Void in
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
+            section.rows.append(row)
+        }
+        
+        tableManager.reloadData()
     }
     
     // MARK: Actions

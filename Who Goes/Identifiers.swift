@@ -26,7 +26,7 @@ struct Identifiers {
         static let PushPermissionNav = "PushPermissionNavController"
     }
     
-    struct Cells {
-        
+    struct Cell {
+        static let Channel = "CellChannel"
     }
 }

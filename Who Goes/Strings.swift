@@ -37,6 +37,7 @@ struct Strings {
         static let addAlertMessage = "What is the channel's name you want to add?".localized()
         static let addAlertActionSave = "Save".localized()
         static let addAlertActionCancel = "Cancel".localized()
+        static let createdBy = "Created by ".localized()
     }
 
     struct Login {

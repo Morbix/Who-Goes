@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WzK-U0-LnH">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
@@ -26,7 +25,7 @@
         <!--Channels View Controller-->
         <scene sceneID="4Xk-Pb-DjJ">
             <objects>
-                <viewController id="hqB-hA-7p2" customClass="ChannelsViewController" customModule="Who_Goes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="hqB-hA-7p2" customClass="ChannelsViewController" customModule="Who_Goes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Mt-VL-Fm9"/>
                         <viewControllerLayoutGuide type="bottom" id="yzt-5j-A7t"/>
@@ -34,10 +33,49 @@
                     <view key="view" contentMode="scaleToFill" id="3Dw-D8-PMe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YXR-Bv-ke6">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellChannel" textLabel="l80-RS-H0x" detailTextLabel="9l3-Fz-KCr" style="IBUITableViewCellStyleSubtitle" id="h9e-bg-2cl">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h9e-bg-2cl" id="0r2-Kr-xfk">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l80-RS-H0x">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9l3-Fz-KCr">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YXR-Bv-ke6" secondAttribute="trailing" id="Sgj-FO-v2g"/>
+                            <constraint firstItem="YXR-Bv-ke6" firstAttribute="leading" secondItem="3Dw-D8-PMe" secondAttribute="leading" id="UKv-pd-0dM"/>
+                            <constraint firstItem="YXR-Bv-ke6" firstAttribute="top" secondItem="0Mt-VL-Fm9" secondAttribute="bottom" id="lTJ-Pb-UmX"/>
+                            <constraint firstItem="yzt-5j-A7t" firstAttribute="top" secondItem="YXR-Bv-ke6" secondAttribute="bottom" id="z8l-hK-k1g"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PKk-TB-fA9"/>
                     <connections>
+                        <outlet property="__tableView" destination="YXR-Bv-ke6" id="28o-bf-xaI"/>
                         <segue destination="3TK-nC-Kxr" kind="show" identifier="ChannelSegue" id="kEm-Uw-SeE"/>
                     </connections>
                 </viewController>

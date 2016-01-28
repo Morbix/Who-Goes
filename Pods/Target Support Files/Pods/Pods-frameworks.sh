@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Bolts.framework"
   install_framework "Pods/DateTools.framework"
+  install_framework "Pods/EZLoadingActivity.framework"
   install_framework "Pods/KBRoundedButton.framework"
   install_framework "Pods/Parse.framework"
   install_framework "Pods/SwiftyTimer.framework"
@@ -94,6 +95,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Bolts.framework"
   install_framework "Pods/DateTools.framework"
+  install_framework "Pods/EZLoadingActivity.framework"
   install_framework "Pods/KBRoundedButton.framework"
   install_framework "Pods/Parse.framework"
   install_framework "Pods/SwiftyTimer.framework"
