@@ -8,11 +8,12 @@
 
 import UIKit
 import TableManager
+import EZLoadingActivity
 
 class ChannelsViewController: UIViewController {
 
     var validated = false
-    var channels = [String]()
+    var channels = [Channel]()
     @IBOutlet weak var __tableView: UITableView!
     lazy var tableManager : TableManager = TableManager(tableView: self.__tableView)
     let sectionYourChannels = Section()
@@ -37,8 +38,6 @@ class ChannelsViewController: UIViewController {
     // MARK: SetUps
     
     func setUpTable() {
-        tableManager.stateRows = TableManager.getDefaultStateRows()
-        
         sectionYourChannels.heightForStaticHeader = 26
         sectionRegisteredChannels.heightForStaticHeader = 26
         sectionOtherChannels.heightForStaticHeader = 26
@@ -88,18 +87,30 @@ class ChannelsViewController: UIViewController {
     }
     
     func saveChannel(channelName: String) {
-        channels.append(channelName)
-        updateTable()
+        
+        EZLoadingActivity.show(Strings.LoadingActivity.saving, disableUI: true)
+        
+        Channel.saveNewChannel(withName: channelName) { (channel, error) -> Void in
+            
+            EZLoadingActivity.hide()
+            
+            if let error = error?.localizedDescription {
+                error.showAsAlert(target: self)
+            }else{
+                self.channels.append(channel)
+                self.updateTableRows()
+            }
+        }
     }
     
-    func updateTable() {
+    func updateTableRows() {
         sectionYourChannels.rows.removeAll()
         
         for channel in channels {
             let row = Row(identifier: Identifiers.Cell.Channel, object: channel) { (object, cell, indexPath) -> Void in
-                if let object = object as? String {
-                    cell.textLabel?.text = object
-                    cell.detailTextLabel?.text = Strings.Channels.createdBy
+                if let channel = object as? Channel  {
+                    cell.textLabel?.text = channel.name
+                    cell.detailTextLabel?.text = Strings.Channels.createdBy + (channel.createdBy.username ?? "undefined")
                 }
             }
             row.didSelectRowAtIndexPath = { (row: Row, tableView: UITableView, indexPath: NSIndexPath) -> Void in

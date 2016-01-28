@@ -65,5 +65,9 @@ struct Strings {
         static let login = "Login".localized()
         static let logout = "Logout".localized()
     }
+    
+    struct LoadingActivity {
+        static let saving = "Saving...".localized()
+    }
 }
 
