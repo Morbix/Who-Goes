@@ -40,21 +40,17 @@ class SettingsViewController: UIViewController {
     func logOut() {
         UserManager.logout({ (error) -> Void in
             self.updateState()
+            UserManager.openPermissionAndLoginDialog(self)
         })
     }
     
-    func openPermissionAndLoginDialog() {
-        if let navController = UIStoryboard(name: Identifiers.StoryboardName.Login, bundle: nil).instantiateInitialViewController(){
-            presentViewController(navController, animated: true, completion: nil)
-        }
-    }
     
     // MARK: Actions
     @IBAction func authenticationTouched(sender: AnyObject) {
         if UserManager.hasUserAuthenticated() {
             logOut()
         } else {
-            openPermissionAndLoginDialog()
+            UserManager.openPermissionAndLoginDialog(self)
         }
     }
 }

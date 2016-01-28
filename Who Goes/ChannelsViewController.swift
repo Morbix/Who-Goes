@@ -29,18 +29,11 @@ class ChannelsViewController: UIViewController {
     func checkPermissions() {
         guard UserManager.hasUserAuthenticated() && UserManager.hasDeviceToken() else {
             
-            openPermissionAndLoginDialog()
+            UserManager.openPermissionAndLoginDialog(self)
             
             return
         }
         
         validated = true
     }
-    
-    func openPermissionAndLoginDialog() {
-        if let navController = UIStoryboard(name: Identifiers.StoryboardName.Login, bundle: nil).instantiateInitialViewController(){
-            presentViewController(navController, animated: true, completion: nil)
-        }
-    }
-
 }

@@ -22,6 +22,10 @@ struct Identifiers {
         static let Login = "Login"
     }
     
+    struct StoryboardId {
+        static let PushPermissionNav = "PushPermissionNavController"
+    }
+    
     struct Cells {
         
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b3R-oS-fKL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lJ1-k5-H8Z">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mjj-pn-bIG">
             <objects>
-                <navigationController id="b3R-oS-fKL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PushPermissionNavController" id="b3R-oS-fKL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YoO-WT-Jg4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCK-Ad-zfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-531" y="443"/>
+            <point key="canvasLocation" x="265" y="2047"/>
         </scene>
         <!--Push Authorization View Controller-->
         <scene sceneID="pT1-05-uNu">
@@ -80,7 +80,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k73-6s-z5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="443"/>
+            <point key="canvasLocation" x="989" y="2047"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="74G-S3-agg">
+            <objects>
+                <navigationController id="lJ1-k5-H8Z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4ne-eB-poy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tal-En-Kzn" kind="relationship" relationship="rootViewController" id="EEF-uH-P44"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rho-4q-V3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="1251"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="nuC-ug-l6k">
@@ -199,6 +215,7 @@
                             <constraint firstAttribute="trailing" secondItem="vil-hL-LnX" secondAttribute="trailing" constant="15" id="ydx-y7-WKo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wu2-Zf-IpL"/>
                     <connections>
                         <outlet property="passwordLabel" destination="vil-hL-LnX" id="am3-5i-AK6"/>
                         <outlet property="passwordTextField" destination="6SH-ay-GdJ" id="znV-yv-Qh1"/>
@@ -211,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFJ-5G-5xC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="443"/>
+            <point key="canvasLocation" x="1713" y="1271"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="aEd-eb-dNv">
@@ -362,7 +379,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pjp-5Q-e4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="443"/>
+            <point key="canvasLocation" x="2375" y="1271"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="F3T-qn-xxu"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -86,11 +86,19 @@ class PushAuthorizationViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func dismissModal() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: Actions
     
     @IBAction func primaryButtonTouched(sender: AnyObject) {
         if UserManager.hasDeviceToken() {
-            goToLogin()
+            if UserManager.hasUserAuthenticated() {
+                dismissModal()
+            } else {
+                goToLogin()
+            }
         }else{
             askForPermissions()
         }

@@ -47,4 +47,15 @@ class UserManager {
         
         newUser.signUpInBackgroundWithBlock(block)
     }
+    
+    static func openPermissionAndLoginDialog(target : UIViewController) {
+        if UserManager.hasDeviceToken() {
+            if let navController = UIStoryboard(name: Identifiers.StoryboardName.Login, bundle: nil).instantiateInitialViewController(){
+                target.presentViewController(navController, animated: true, completion: nil)
+            }
+        }else{
+            let navController = UIStoryboard(name: Identifiers.StoryboardName.Login, bundle: nil).instantiateViewControllerWithIdentifier(Identifiers.StoryboardId.PushPermissionNav)
+            target.presentViewController(navController, animated: true, completion: nil)
+        }
+    }
 }
