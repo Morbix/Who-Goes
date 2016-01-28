@@ -38,6 +38,9 @@ struct Strings {
         static let addAlertActionSave = "Save".localized()
         static let addAlertActionCancel = "Cancel".localized()
         static let createdBy = "Created by ".localized()
+        static let yourChannels = "Your Channels".localized()
+        static let registeredChannels = "Registered Channels".localized()
+        static let otherChannels = "Other Channels".localized()
     }
 
     struct Login {

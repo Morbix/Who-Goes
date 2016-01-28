@@ -15,6 +15,9 @@ class ChannelsViewController: UIViewController {
     var channels = [String]()
     @IBOutlet weak var __tableView: UITableView!
     lazy var tableManager : TableManager = TableManager(tableView: self.__tableView)
+    let sectionYourChannels = Section()
+    let sectionRegisteredChannels = Section()
+    let sectionOtherChannels = Section()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,21 @@ class ChannelsViewController: UIViewController {
     
     func setUpTable() {
         tableManager.stateRows = TableManager.getDefaultStateRows()
-        tableManager.sections.append(Section())
+        
+        sectionYourChannels.heightForStaticHeader = 26
+        sectionRegisteredChannels.heightForStaticHeader = 26
+        sectionOtherChannels.heightForStaticHeader = 26
+        
+        sectionYourChannels.titleForStaticHeader = Strings.Channels.yourChannels
+        sectionRegisteredChannels.titleForStaticHeader = Strings.Channels.registeredChannels
+        sectionOtherChannels.titleForStaticHeader = Strings.Channels.otherChannels
+        
+        sectionRegisteredChannels.visible = false
+        sectionOtherChannels.visible = false
+        
+        tableManager.sections.append(sectionYourChannels)
+        tableManager.sections.append(sectionRegisteredChannels)
+        tableManager.sections.append(sectionOtherChannels)
     }
     
     func setUpNavBar() {
@@ -76,8 +93,7 @@ class ChannelsViewController: UIViewController {
     }
     
     func updateTable() {
-        let section = tableManager.sectionForIndex(0)
-        section.rows.removeAll()
+        sectionYourChannels.rows.removeAll()
         
         for channel in channels {
             let row = Row(identifier: Identifiers.Cell.Channel, object: channel) { (object, cell, indexPath) -> Void in
@@ -89,7 +105,7 @@ class ChannelsViewController: UIViewController {
             row.didSelectRowAtIndexPath = { (row: Row, tableView: UITableView, indexPath: NSIndexPath) -> Void in
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
-            section.rows.append(row)
+            sectionYourChannels.rows.append(row)
         }
         
         tableManager.reloadData()
