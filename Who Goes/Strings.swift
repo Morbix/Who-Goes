@@ -33,6 +33,10 @@ struct Strings {
     
     struct Channels {
         static let title = "Channels".localized()
+        static let addAlertTitle = "Adding".localized()
+        static let addAlertMessage = "What is the channel's name you want to add?".localized()
+        static let addAlertActionSave = "Save".localized()
+        static let addAlertActionCancel = "Cancel".localized()
     }
 
     struct Login {
