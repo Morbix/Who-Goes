@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         passwordTextField.placeholder = "******"
     }
     
-    func goToSignUp(){
+    func goToSignUp() {
         performSegueWithIdentifier(Identifiers.Segues.SignUp, sender: nil)
     }
     
@@ -78,9 +78,11 @@ class LoginViewController: UIViewController {
     @IBAction func signUpTouched(sender: AnyObject) {
         goToSignUp()
     }
+    
 }
 
-extension LoginViewController : UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField == usernameTextField {
             passwordTextField.becomeFirstResponder()
@@ -90,4 +92,5 @@ extension LoginViewController : UITextFieldDelegate {
         
         return true
     }
+    
 }

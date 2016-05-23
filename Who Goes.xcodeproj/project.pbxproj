@@ -237,7 +237,8 @@
 				2DAA4DCE1C510F02009D776C /* Resources */,
 				F170239EC97682ACF5E143B8 /* Embed Pods Frameworks */,
 				451A7EAB3E726B472C0CEEEE /* Copy Pods Resources */,
-				2DA746361C5A4CB6009B0EC4 /* ShellScript */,
+				DB4F75A62E0C64352B4D0FDC /* Tailor */,
+				2DA746361C5A4CB6009B0EC4 /* TODO and FIXME warnings */,
 			);
 			buildRules = (
 			);
@@ -330,13 +331,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2DA746361C5A4CB6009B0EC4 /* ShellScript */ = {
+		2DA746361C5A4CB6009B0EC4 /* TODO and FIXME warnings */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "TODO and FIXME warnings";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +374,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		DB4F75A62E0C64352B4D0FDC /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\ntailor --except=trailing-whitespace --max-severity error \"${PROJECT_NAME}\"\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
 		};
 		F170239EC97682ACF5E143B8 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
